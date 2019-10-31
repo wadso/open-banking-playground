@@ -19,7 +19,7 @@ exports.getApplication = function (config) {
     logger: config.logging
   });
   application.register(helmet);
-  application.register(components.Account);
+  // application.register(components.Account);
 
   return application;
 };
