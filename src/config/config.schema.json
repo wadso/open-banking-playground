@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "properties": {
+    "server": {
+      "type": "object",
+      "required": [
+        "port"
+      ],
+      "properties": {
+        "port": {
+          "type": "integer"
+        }
+      }
+    },
+    "logging": {
+      "type": "object",
+      "required": [
+        "prettyPrint", "level"
+      ],
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": ["debug", "info"]
+        },
+        "prettyPrint": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "connectors": {
+      "type": "object",
+      "required": [
+        "mongodb"
+      ],
+      "properties": {
+        "mongodb": {
+          "type": "object",
+          "required": [
+            "connectionString"
+          ],
+          "properties": {
+            "connectionString": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "server",
+    "logging",
+    "connectors"
+  ]
+}

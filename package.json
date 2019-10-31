@@ -1,0 +1,37 @@
+{
+  "name": "open-banking-playground",
+  "version": "1.0.0",
+  "description": "API Banking API Service for <Whatever We Call this",
+  "main": "index.js",
+  "scripts": {
+    "lint": "node_modules/.bin/semistandard --fix",
+    "start": "chmod +x src/index.js && src/index.js",
+    "start.dev": "nodemon ./src/index.js",
+    "test": "mocha test"
+  },
+  "keywords": [],
+  "author": "Larry Eliemenye",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.10.0",
+    "bcrypt": "1.0.3",
+    "bluebird": "^3.7.1",
+    "fastify": "^2.6.0",
+    "fastify-helmet": "^3.0.2",
+    "glob": "^7.1.5",
+    "jsonwebtoken": "^8.5.1",
+    "lodash.capitalize": "^4.2.1",
+    "lodash.merge": "^4.6.1",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.6.3",
+    "pino": "^5.12.6",
+    "pino-pretty": "^3.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4",
+    "node-gyp": "^6.0.0",
+    "nodemon": "^1.19.3",
+    "semistandard": "^13.0.1",
+    "sinon": "^7.3.2"
+  }
+}
