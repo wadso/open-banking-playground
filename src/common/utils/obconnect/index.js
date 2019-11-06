@@ -1,0 +1,1 @@
+exports.ObConnect = require('./auth');
