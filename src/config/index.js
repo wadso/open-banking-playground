@@ -32,7 +32,6 @@ function getDefaultConfig () {
  */
 function mergeAndValidateConfig () {
   const configData = merge({}, getDefaultConfig(), getEnvConfig());
-  console.log(configData)
   const ajv = new AJV({ coerceTypes: true });
   ajv.compile(configSchema, configData);
 

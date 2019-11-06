@@ -1,6 +1,7 @@
 const fastify = require('fastify');
 const helmet = require('fastify-helmet');
 const components = require('./components');
+const obconnect = require('./common/utils/obconnect');
 /**
  *
  * @param config
@@ -19,7 +20,7 @@ exports.getApplication = function (config) {
     logger: config.logging
   });
   application.register(helmet);
-  // application.register(components.Account);
+  application.register(obconnect.init());
 
   return application;
 };

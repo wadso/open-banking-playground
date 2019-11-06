@@ -18,8 +18,14 @@ Auth.prototype.use = function (name, strategy) {
   return this;
 };
 
+/**
+ * returns a compatible interface to fastify.register
+ * @param config
+ * @returns {Function}
+ */
 Auth.prototype.init = function (config) {
   return (fastify, optns, next) => {
+    console.log('hit the fastify shit')
     next()
   }
 }

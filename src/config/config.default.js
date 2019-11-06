@@ -12,7 +12,7 @@ module.exports = {
   connectors: {
     mongodb: {
       dbName: 'playground',
-      connectionString: 'mongodb://localhost:27017/playground',
+      connectionString: 'mongodb://mongodb:27017/playground',
       indexes: {
         Accounts: [{
           spec: { email: 1},

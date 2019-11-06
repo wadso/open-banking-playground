@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "node_modules/.bin/semistandard --fix",
     "start": "chmod +x src/index.js && src/index.js",
-    "start.dev": "nodemon ./src/index.js",
+    "start.dev": "nodemon node --inspect=0.0.0.0:3000 ./src/index.js",
     "test": "mocha test"
   },
   "keywords": [],
@@ -14,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "ajv": "^6.10.0",
-    "bcrypt": "1.0.3",
     "bluebird": "^3.7.1",
     "fastify": "^2.6.0",
     "fastify-helmet": "^3.0.2",
@@ -31,7 +30,6 @@
   "devDependencies": {
     "mocha": "^6.1.4",
     "node-gyp": "^6.0.0",
-    "nodemon": "^1.19.3",
     "semistandard": "^13.0.1",
     "sinon": "^7.3.2"
   }
