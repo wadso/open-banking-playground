@@ -1,5 +1,17 @@
 version: '3'
 services:
+  console:
+    image: nodesource/nsolid-console
+    container_name: nsolid.console
+    ports:
+      - 9001:9001
+      - 9002:9002
+      - 9003:9003
+      - 6753:6753
+    environment:
+      - NSOLID_CONSOLE_LICENSE_KEY=847ebce2-269e-482f-b6bc-969c19a619a1
+    networks:
+      - nsolid
   openbanking:
     build:
       context: .
@@ -8,6 +20,13 @@ services:
     ports:
       - 3000:3000
       - 9229:9229
+    environment:
+      - NSOLID_APPNAME=openbanking
+      - NSOLID_COMMAND=console:9001
+      - NSOLID_DATA=console:9002
+      - NSOLID_BULK=console:9003
+    networks:
+      - nsolid
     volumes:
       - .:/usr/app
       - /usr/app/node_modules
@@ -17,3 +36,5 @@ services:
     image: mongo
     ports:
       - '27017:27017'
+networks:
+  nsolid:

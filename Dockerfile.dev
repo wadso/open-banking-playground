@@ -1,4 +1,4 @@
-FROM node:11.15-alpine
+FROM nodesource/nsolid
 
 ENV APP_HOME=/usr/app
 
@@ -10,4 +10,4 @@ RUN npm install -g nodemon
 
 EXPOSE 3000
 
-CMD ["npm", "run", "start.dev"]
+CMD ["npm", "run", "nsolid.start"]
