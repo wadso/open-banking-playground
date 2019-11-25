@@ -6,8 +6,7 @@ COPY ./src ${APP_NAME}/src
 COPY ./package.json ${APP_NAME}
 
 RUN npm install
-RUN npm install -g nodemon
 
 EXPOSE 3000
 
-CMD ["npm", "run", "nsolid.start"]
+CMD ["npm", "start"]

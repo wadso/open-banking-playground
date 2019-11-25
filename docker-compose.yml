@@ -10,8 +10,6 @@ services:
       - 6753:6753
     environment:
       - NSOLID_CONSOLE_LICENSE_KEY=847ebce2-269e-482f-b6bc-969c19a619a1
-    networks:
-      - nsolid
   openbanking:
     build:
       context: .
@@ -21,20 +19,17 @@ services:
       - 3000:3000
       - 9229:9229
     environment:
-      - NSOLID_APPNAME=openbanking
+      - NSOLID_APPNAME=lendable
       - NSOLID_COMMAND=console:9001
       - NSOLID_DATA=console:9002
       - NSOLID_BULK=console:9003
-    networks:
-      - nsolid
     volumes:
       - .:/usr/app
       - /usr/app/node_modules
     depends_on:
       - mongodb
+      - console
   mongodb:
     image: mongo
     ports:
       - '27017:27017'
-networks:
-  nsolid:

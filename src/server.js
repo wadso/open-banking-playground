@@ -20,7 +20,7 @@ exports.getApplication = function (config) {
     logger: config.logging
   });
   application.register(helmet);
-  application.register(obconnect.init());
+  // application.register(obconnect.init());
 
   return application;
 };
