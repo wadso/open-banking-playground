@@ -1,7 +1,7 @@
 const fastify = require('fastify');
 const helmet = require('fastify-helmet');
 const components = require('./components');
-const obconnect = require('./common/utils/obconnect');
+const truelayer = require('./common/utils/truelayer');
 /**
  *
  * @param config
@@ -20,7 +20,11 @@ exports.getApplication = function (config) {
     logger: config.logging
   });
   application.register(helmet);
-  // application.register(obconnect.init());
+  application.register(truelayer({
+    client_id: 'sandbox-wadso-f9ed85',
+    client_secret: '00aee465-d29f-431a-b21a-584f07b840ff',
+    redirect_uri: 'http://localhost:3000/callback'
+  }));
 
   return application;
 };

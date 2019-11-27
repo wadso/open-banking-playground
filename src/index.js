@@ -13,7 +13,7 @@ const server = getApplication(config);
  */
 const start = async function () {
   try {
-    await Mongo.init();
+    // await Mongo.init();
     await server.listen(config.server.port, '::');
     return null;
   } catch (error) {
