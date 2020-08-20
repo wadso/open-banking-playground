@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "ajv": "^6.10.0",
-    "bcrypt": "1.0.3",
+    "bcrypt": "5.0.0",
     "bluebird": "^3.7.1",
     "fastify": "^2.6.0",
     "fastify-helmet": "^3.0.2",
