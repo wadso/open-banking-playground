@@ -13,7 +13,7 @@
   "author": "Larry Eliemenye",
   "license": "ISC",
   "dependencies": {
-    "ajv": "^6.10.0",
+    "ajv": "^6.12.3",
     "bcrypt": "1.0.3",
     "bluebird": "^3.7.1",
     "fastify": "^2.6.0",
